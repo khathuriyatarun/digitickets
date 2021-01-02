@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>USER MASTER - DIGI TICKETS</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">	 
+	</head>
+
+<body>
+	<section class="relative page_wrapper">
+		<aside class="fixed">
+			<div>
+				<div class="mt-2 mb-4 text-center">
+					<a href="index.html">
+						<img src="img/logo.png" width="150px;">
+					</a>
+				</div>
+				<nav>
+					<ul class="list-unstyled px-3">
+						<li class="row digi_nav_item">
+							<a href="index.html">
+								<img src="img/dashboard.png" class="isnot_active">
+								<img src="img/dashboard_active.png" class="is_active">
+								<span>Dashboard</span>
+							</a>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="" class="haschilds">
+								<img src="img/tickets.png" class="isnot_active">
+								<img src="img/tickets_active.png" class="is_active">
+								<span>Tickets</span>
+							</a>
+							<ul class="list-unstyled child_nav pl-4">
+								<li>
+									<a href="all_tickets.html">
+										<span class="marker_circle"></span>
+										All Tickets
+									</a>
+								</li>
+								<li>
+									<a href="new_tickets.html">
+										<span class="marker_circle"></span>
+										Create Ticket
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="" class="haschilds">
+								<img src="img/masters.png" class="isnot_active">
+								<img src="img/masters_active.png" class="is_active">
+								<span>Masters</span>
+							</a>
+							<ul class="list-unstyled child_nav pl-4">
+								<li>
+									<a href="department_master.html">
+										<span class="marker_circle"></span>
+										Department Master
+									</a>
+								</li>
+								<li>
+									<a href="project_master.html">
+										<span class="marker_circle"></span>
+										Project Master
+									</a>
+								</li>
+								<li>
+									<a href="module_master.html">
+										<span class="marker_circle"></span>
+										Module Master
+									</a>
+								</li>
+								<li>
+									<a href="agent_master.html">
+										<span class="marker_circle"></span>
+										Agent Master
+									</a>
+								</li>
+								<li>
+									<a href="user_master_invoice.html">
+										<span class="marker_circle"></span>
+										Users Master
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="analytics_report.html">
+								<img src="img/analytics.png" class="isnot_active">
+								<img src="img/analytics_active.png" class="is_active">
+								<span class="text-nowrap">Analytics & reports</span>
+							</a>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="#">
+								<img src="img/setting.png" class="isnot_active">
+								<img src="img/setting_active.png" class="is_active">
+								<span>Settings</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<div class="backdrop"></div>
+		<span class="close_aside">
+			<i class="fas fa-angle-left"></i>
+		</span>
+		<header class="fixed d-flex align-items-center">
+			<span class="toggle_aside">
+				<i class="fas fa-bars"></i>
+			</span>
+			<div class="input_wrapper ml-4">
+				<input type="search" name="search" id="search_input" placeholder="Search..." class="py-3" autocomplete="off">
+				<i class="fas fa-search"></i>
+			</div>
+			<ul class="mb-0 list-unstyled ml-auto box-shadow_sm">
+				<li class="px-3 new_ticket_hide">
+					<button class="btn new_ticket_btn">
+						<span>New Ticket</span>
+						<i class="fas fa-plus ml-2"></i>
+					</button>
+				</li>
+				<li class="px-4">
+					<img src="img/notification.png" width="21px;">
+				</li>
+				<li class="px-3">
+					<div>
+						<img src="img/us_flag.jpg" width="25px;">
+						<span class="ml-1 d-none-sm">EN</span>
+					</div>
+				</li>
+				<li class="log_out px-3 relative">
+					<div class="">
+						<img src="img/profile_user.jpg">
+						<span>John Doe</span>
+						<i class="fas fa-angle-down d-none-sm"></i>
+						<ul class="logout_list list-unstyled absolute">
+							<li>
+								<a href="login.html">
+									<span>Log Out</span>
+									<i class="fas fa-sign-out-alt ml-auto"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<button class="btn new_ticket_btn new_ticket_show">
+				<span>New Ticket</span>
+				<i class="fas fa-plus ml-2"></i>
+			</button>
+			<span class="open_ul">
+				<i class="fas fa-ellipsis-v"></i>
+			</span>
+		</header>
+		<section class="main_view">
+			<div class="all_tickets main_view_top pt-3 px-3">
+				<h5>User Master & Invoice</h5>
+			</div>
+			<div class="px-3 mt-4">
+				<button class="accordion active">
+					User Master
+					<i class="fas fa-angle-down float-right mt-2"></i>
+				</button>
+				<div class="panel bg-white" style="display: block;">
+					<div class="px-sm-3">
+						<form class="px-4 py-4" id="agentmaster_form">
+							<div class="row">
+								<div class="col-md-12">
+									<label>User ID</label>
+									<div class="input_wrapper">
+										<input type="text" name="user_id" placeholder="#1234567">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>First Name</label>
+									<div class="input_wrapper">
+										<input type="text" name="user_fname" placeholder="Enter your first name">
+										<img src="img/user_green.png">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Last Name</label>
+									<div class="input_wrapper">
+										<input type="text" name="user_lname" placeholder="Enter your last name">
+										<img src="img/user_green.png">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Email</label>
+									<div class="input_wrapper">
+										<input type="text" name="user_email" placeholder="Enter your email">
+										<img src="img/mail.png">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Phone 1</label>
+									<div class="input_wrapper">
+										<input type="text" name="user_phone1" placeholder="Enter your contact number">
+										<img src="img/phone.png">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Phone 2</label>
+									<div class="input_wrapper">
+										<input type="text" name="user_phone2" placeholder="Enter your contact number">
+										<img src="img/phone.png">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Agent</label>
+									<div class="input_wrapper select_wrapper">
+										<select>
+											<option>ITCom</option>
+											<option>John Doe</option>
+										</select>
+										<img src="img/angle-down.png">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Department</label>
+									<div class="input_wrapper select_wrapper">
+										<select>
+											<option>Customer Care</option>
+											<option>Support</option>
+										</select>
+										<img src="img/angle-down.png">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Project</label>
+									<div class="input_wrapper select_wrapper">
+										<select>
+											<option>Digisuite Pharma</option>
+											<option>Hyperloop</option>
+										</select>
+										<img src="img/angle-down.png">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="d-flex d-block-550 align-items-center my-3">
+										<h6 class="my-0 mr-3 mb-2 mb-sm-0">Select Role</h6>
+										<div  class="d-flex">
+											<label class="role_input mr-3">Support
+		  										<input type="radio" checked="checked" name="radio">
+		  										<span class="checkmark"></span>
+											</label>
+											<label class="role_input">Customer
+		  										<input type="radio" name="radio">
+		  										<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<label>Address</label>
+									<div class="input_wrapper">
+										<input type="text" name="agent_address" placeholder="Enter your address">
+										<img src="img/address.png">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<label>City / Town</label>
+									<div class="input_wrapper">
+										<input type="text" name="agent_city">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<label>Country</label>
+									<div class="input_wrapper">
+										<input type="text" name="agent_country">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<label>Postal Code / Zip</label>
+									<div class="input_wrapper">
+										<input type="text" name="agent_zip">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Password</label>
+									<div class="input_wrapper">
+										<input type="password" name="agent_password">
+										<img src="img/password.png">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label>Confirm Password</label>
+									<div class="input_wrapper">
+										<input type="password" name="agent_confirmpassword">
+										<img src="img/password.png">
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<label>Profile Image</label>
+									<div class="profile_ele d-flex">
+										<div>
+											<img src="img/default-user-image.png" id="show_profile" class="mr-0 mr-md-4">
+										</div>
+										<div class="right_ele">
+											<input type="file" name="user_profile" id="user_profile">
+											<button class="filter_button open_userprofile mt-4 mt-md-0" type="button">Choose File</button>
+											<span class="profile_picture_name">No file chosen</span>
+											<p class="mb-0 d-none-sm">Image file required</p>
+											<p class="mb-0 d-none-sm">Suggested format: JPG, 20KB, 150X150 pixels.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 form_basline mt-4 mt-lg-0">
+									<button type="button" class="theme_btn">SAVE</button>
+									<button type="button" class="theme_btn theme_btn2">OPEN</button>
+								</div>
+
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<button class="accordion">
+					Invoice Details
+					<i class="fas fa-angle-down float-right mt-2"></i>
+				</button>
+				<div class="panel bg-white invoice_details_parent">
+					<div class="invoices">
+						<div class="heading px-2">
+							<span>User ID:</span>
+							<span>#123456789</span>
+							<button class="float-right filter_button mt-1" onclick="append_element()">
+								<i class="fas fa-plus"></i>
+							</button>
+						</div>
+						<div class="invoices_form">
+							<div class="invoices_form_inner">
+								<label>Invoice No.</label>
+								<input type="text" name="user_invoice_no">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Invoice Date</label>
+								<input type="text" name="user_invoice_date">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Description</label>
+								<input type="text" name="user_invoice_desc">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Bill Amt</label>
+								<input type="text" name="user_invoice_amt">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Bill Paid</label>
+								<input type="text" name="user_invoice_paid">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Balance</label>
+								<input type="text" name="user_invoice_bal">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Payment Details</label>
+								<input type="text" name="user_payment_details">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Remarks</label>
+								<input type="text" name="user_remarks">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<footer>
+			<p class="mb-0">&copy; 2020 Digisuite Solutions LLP. All Right Copyright Reserved.</p>
+		</footer>
+	</section>
+	<script src="js/jquery3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>  
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var panel = this.nextElementSibling;
+		    if (panel.style.display === "block") {
+		      panel.style.display = "none";
+		    } else {
+		      panel.style.display = "block";
+		    }
+		  });
+		}
+
+
+		function readURL(input) {
+			var filename = document.getElementById("user_profile").files[0].name; 
+			$('.profile_picture_name').html(filename);
+		  if (input.files && input.files[0]) {
+		    var reader = new FileReader();
+		    reader.onload = function(e) {
+		      $('#show_profile').attr('src', e.target.result);
+		    }
+		    reader.readAsDataURL(input.files[0]); // convert to base64 string
+		  }
+		}
+
+		$("#user_profile").change(function() {
+		  readURL(this);
+		});
+
+		$('.open_userprofile').click(function(){
+			$("#user_profile").click();
+		});
+
+
+		function append_element(){
+			$('.invoice_details_parent').append(`<div class="invoices">
+						<div class="heading px-2">
+							<span>User ID:</span>
+							<span>#123456789</span>
+							<button class="float-right filter_button mt-1" onclick="append_element()">
+								<i class="fas fa-plus"></i>
+							</button>
+						</div>
+						<div class="invoices_form">
+							<div class="invoices_form_inner">
+								<label>Invoice No.</label>
+								<input type="text" name="user_invoice_no">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Invoice Date</label>
+								<input type="text" name="user_invoice_date">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Description</label>
+								<input type="text" name="user_invoice_desc">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Bill Amt</label>
+								<input type="text" name="user_invoice_amt">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Bill Paid</label>
+								<input type="text" name="user_invoice_paid">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Balance</label>
+								<input type="text" name="user_invoice_bal">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Payment Details</label>
+								<input type="text" name="user_payment_details">
+							</div>
+							<div class="invoices_form_inner">
+								<label>Remarks</label>
+								<input type="text" name="user_remarks">
+							</div>
+						</div>
+					</div>`)
+		}
+
+		$('.haschilds').click(function(e){
+			e.preventDefault()
+			$(this).next().toggleClass('haschilds_height');
+			$(this).toggleClass('rotate_icon');
+		});
+
+		$('.new_ticket_btn').click(function(){
+			window.location.href = "new_tickets.html";
+		});
+
+		$('.open_ul').click(function(){
+			$('header>ul').slideToggle('medium', function() {
+			    if ($(this).is(':visible'))
+    			$(this).css('display','flex');
+			});
+		});
+
+		$('.toggle_aside').click(function(){
+			$('aside').css('width', '220px');
+			$('.backdrop').css('display', 'unset');
+			$('.close_aside').addClass('close_aside_position');
+		});
+
+		$('.close_aside').click(function(){
+			$(this).removeClass('close_aside_position');
+			$('aside').css('width', '0px');
+			$('.backdrop').css('display', 'none');
+		});
+	</script>
+</body>
+</html>

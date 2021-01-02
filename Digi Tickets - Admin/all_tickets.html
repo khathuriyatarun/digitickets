@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>All TICKETS - DIGI TICKETS</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">	 
+	</head>
+
+<body>
+	<section class="relative page_wrapper">
+		<aside class="fixed">
+			<div>
+				<div class="mt-2 mb-4 text-center">
+					<a href="index.html">
+						<img src="img/logo.png" width="150px;">
+					</a>
+				</div>
+				<nav>
+					<ul class="list-unstyled px-3">
+						<li class="row digi_nav_item">
+							<a href="index.html">
+								<img src="img/dashboard.png" class="isnot_active">
+								<img src="img/dashboard_active.png" class="is_active">
+								<span>Dashboard</span>
+							</a>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="" class="haschilds">
+								<img src="img/tickets.png" class="isnot_active">
+								<img src="img/tickets_active.png" class="is_active">
+								<span>Tickets</span>
+							</a>
+							<ul class="list-unstyled child_nav pl-4">
+								<li>
+									<a href="all_tickets.html">
+										<span class="marker_circle"></span>
+										All Tickets
+									</a>
+								</li>
+								<li>
+									<a href="new_tickets.html">
+										<span class="marker_circle"></span>
+										Create Ticket
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="" class="haschilds">
+								<img src="img/masters.png" class="isnot_active">
+								<img src="img/masters_active.png" class="is_active">
+								<span>Masters</span>
+							</a>
+							<ul class="list-unstyled child_nav pl-4">
+								<li>
+									<a href="department_master.html">
+										<span class="marker_circle"></span>
+										Department Master
+									</a>
+								</li>
+								<li>
+									<a href="project_master.html">
+										<span class="marker_circle"></span>
+										Project Master
+									</a>
+								</li>
+								<li>
+									<a href="module_master.html">
+										<span class="marker_circle"></span>
+										Module Master
+									</a>
+								</li>
+								<li>
+									<a href="agent_master.html">
+										<span class="marker_circle"></span>
+										Agent Master
+									</a>
+								</li>
+								<li>
+									<a href="user_master_invoice.html">
+										<span class="marker_circle"></span>
+										Users Master
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="analytics_report.html">
+								<img src="img/analytics.png" class="isnot_active">
+								<img src="img/analytics_active.png" class="is_active">
+								<span class="text-nowrap">Analytics & reports</span>
+							</a>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="#">
+								<img src="img/setting.png" class="isnot_active">
+								<img src="img/setting_active.png" class="is_active">
+								<span>Settings</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<div class="backdrop"></div>
+		<span class="close_aside">
+			<i class="fas fa-angle-left"></i>
+		</span>
+		<header class="fixed d-flex align-items-center">
+			<span class="toggle_aside">
+				<i class="fas fa-bars"></i>
+			</span>
+			<div class="input_wrapper ml-4">
+				<input type="search" name="search" id="search_input" placeholder="Search..." class="py-3" autocomplete="off">
+				<i class="fas fa-search"></i>
+			</div>
+			<ul class="mb-0 list-unstyled ml-auto box-shadow_sm">
+				<li class="px-3 new_ticket_hide">
+					<button class="btn new_ticket_btn">
+						<span>New Ticket</span>
+						<i class="fas fa-plus ml-2"></i>
+					</button>
+				</li>
+				<li class="px-4">
+					<img src="img/notification.png" width="21px;">
+				</li>
+				<li class="px-3">
+					<div>
+						<img src="img/us_flag.jpg" width="25px;">
+						<span class="ml-1 d-none-sm">EN</span>
+					</div>
+				</li>
+				<li class="log_out px-3 relative">
+					<div class="">
+						<img src="img/profile_user.jpg">
+						<span>John Doe</span>
+						<i class="fas fa-angle-down d-none-sm"></i>
+						<ul class="logout_list list-unstyled absolute">
+							<li>
+								<a href="login.html">
+									<span>Log Out</span>
+									<i class="fas fa-sign-out-alt ml-auto"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<button class="btn new_ticket_btn new_ticket_show">
+				<span>New Ticket</span>
+				<i class="fas fa-plus ml-2"></i>
+			</button>
+			<span class="open_ul">
+				<i class="fas fa-ellipsis-v"></i>
+			</span>
+		</header>
+		<section class="main_view">
+			<div class="all_tickets main_view_top pt-3 px-3">
+				<h5>All Tickets</h5>
+				<!-- dkut -->
+			</div>
+			<div class="px-3 mt-4">
+				<div class="bg-white px-3 border-radius-5px">
+					<div class="row all_tickets_table_heading px-3">
+						<div class="col-lg-6 pt-2 pt-md-0">
+							<h5 class="mb-0">All Tickets</h5>
+						</div>
+						<div class="col-lg-6 mt-2 mt-lg-0 text-right">
+							<span class="font-weight-bold mr-2">Sort By:</span>
+							<select class="all_tickets_select mr-2 mt-2 mt-md-0">
+								<option selected disabled>Date Created</option>
+								<option></option>
+							</select>
+							<button class="filter_button mt-2 mt-md-0">
+								<img src="img/filter_icon.png" width="15px;" class="mr-1">
+								<span>Filters</span>
+							</button>
+						</div>
+					</div>
+					<div class="table-responsive all_tickets_table">
+					  <table class="table">
+					   	<thead>
+					   		<tr>
+					   			<th>SL NO</th>
+					   			<th>Ticket Date</th>
+					   			<th>Created By</th>
+					   			<th>Agent Name</th>
+					   			<th>Title</th>
+					   			<th>Priority</th>
+					   			<th>Project Name</th>
+					   			<th>Status</th>
+					   			<th>Action</th>
+					   		</tr>
+					   	</thead>
+					   	<tbody>
+					   		<tr>
+					   			<td>01</td>
+					   			<td>03/09/20</td>
+					   			<td>Rodney stiye</td>
+					   			<td>John doe</td>
+					   			<td>20 Aug 2020</td>
+					   			<td>
+					   				<span class="badge badge-warning text-white py-2">
+					   					High
+					   				</span>
+					   			</td>
+					   			<td>Digisuit Pharmacy</td>
+					   			<td>Pending</td>
+					   			<td>
+					   				<ul class="mb-0 list-unstyled row actions">
+					   					<li class="show_status">
+					   						<a href="#" class="tooltip_rel">
+					   							<img src="img/edit_icon.png">
+					   							<span class="tooltiptext">Status</span>
+					   						</a>
+					   						<ul class="list-unstyled absolute bg-white status_changed">
+					   							<li><a href="#">Reopen</a></li>
+					   							<li class="active"><a href="#">Pending</a></li>
+					   							<li><a href="#">Resolved</a></li>
+					   							<li><a href="#">Closed</a></li>
+					   							<li><a href="#">Reopen</a></li>
+					   							<li><a href="#">Inprogress</a></li>
+					   						</ul>
+					   					</li>
+					   					<li>
+					   						<a href="#" class="tooltip_rel">
+					   							<img src="img/chat_icon.png">
+					   							<span class="tooltiptext">Comment</span>
+					   						</a>
+					   					</li>
+					   					<li>
+					   						<a href="tickets.html" class="tooltip_rel">
+					   							<img src="img/view_icon.png">
+					   							<span class="tooltiptext">View</span>
+					   						</a>
+					   					</li>
+					   				</ul>
+					   				
+					   			</td>
+					   		</tr>
+
+					   		<tr>
+					   			<td>01</td>
+					   			<td>03/09/20</td>
+					   			<td>Rodney stiye</td>
+					   			<td>John doe</td>
+					   			<td>20 Aug 2020</td>
+					   			<td>
+					   				<span class="badge badge-warning text-white py-2">
+					   					High
+					   				</span>
+					   			</td>
+					   			<td>Digisuit Pharmacy</td>
+					   			<td>Pending</td>
+					   			<td>
+					   				<ul class="mb-0 list-unstyled row actions">
+					   					<li class="show_status">
+					   						<a href="#" class="tooltip_rel">
+					   							<img src="img/edit_icon.png">
+					   							<span class="tooltiptext">Status</span>
+					   						</a>
+					   						<ul class="list-unstyled absolute bg-white status_changed">
+					   							<li><a href="#">Reopen</a></li>
+					   							<li class="active"><a href="#">Pending</a></li>
+					   							<li><a href="#">Resolved</a></li>
+					   							<li><a href="#">Closed</a></li>
+					   							<li><a href="#">Reopen</a></li>
+					   							<li><a href="#">Inprogress</a></li>
+					   						</ul>
+					   					</li>
+					   					<li>
+					   						<a href="#" class="tooltip_rel">
+					   							<img src="img/chat_icon.png">
+					   							<span class="tooltiptext">Comment</span>
+					   						</a>
+					   					</li>
+					   					<li>
+					   						<a href="tickets.html" class="tooltip_rel">
+					   							<img src="img/view_icon.png">
+					   							<span class="tooltiptext">View</span>
+					   						</a>
+					   					</li>
+					   				</ul>
+					   				
+					   			</td>
+					   		</tr>
+					   		<tr>
+					   			<td>01</td>
+					   			<td>03/09/20</td>
+					   			<td>Rodney stiye</td>
+					   			<td>John doe</td>
+					   			<td>20 Aug 2020</td>
+					   			<td>
+					   				<span class="badge badge-warning text-white py-2">
+					   					High
+					   				</span>
+					   			</td>
+					   			<td>Digisuit Pharmacy</td>
+					   			<td>Pending</td>
+					   			<td>
+					   				<ul class="mb-0 list-unstyled row actions">
+					   					<li class="show_status">
+					   						<a href="#" class="tooltip_rel">
+					   							<img src="img/edit_icon.png">
+					   							<span class="tooltiptext">Status</span>
+					   						</a>
+					   						<ul class="list-unstyled absolute bg-white status_changed">
+					   							<li><a href="#">Reopen</a></li>
+					   							<li class="active"><a href="#">Pending</a></li>
+					   							<li><a href="#">Resolved</a></li>
+					   							<li><a href="#">Closed</a></li>
+					   							<li><a href="#">Reopen</a></li>
+					   							<li><a href="#">Inprogress</a></li>
+					   						</ul>
+					   					</li>
+					   					<li>
+					   						<a href="#" class="tooltip_rel">
+					   							<img src="img/chat_icon.png">
+					   							<span class="tooltiptext">Comment</span>
+					   						</a>
+					   					</li>
+					   					<li>
+					   						<a href="tickets.html" class="tooltip_rel">
+					   							<img src="img/view_icon.png">
+					   							<span class="tooltiptext">View</span>
+					   						</a>
+					   					</li>
+					   				</ul>
+					   				
+					   			</td>
+					   		</tr>
+					   	</tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+
+			<!-- filters -->
+			<div class="filters_dt fixed">
+				<div class="heading py-3 px-4">
+					<span>FILTERS</span>
+					<i class="fas fa-times close_filter float-right"></i>
+				</div>
+				<div class="px-4">
+					<label class="mt-4">Project</label>
+					<select>
+						<option>Support</option>
+						<option>Bugs</option>
+					</select>
+
+					<label>Department</label>
+					<select>
+						<option>John Doe</option>
+						<option>Joe Biden</option>
+					</select>
+
+					<label>Module</label>
+					<select>
+						<option>Open</option>
+						<option>Pending</option>
+					</select>
+
+					<label>Agent</label>
+					<select>
+						<option>High</option>
+						<option>Low</option>
+					</select>
+
+					<label>Status</label>
+					<select>
+						<option>High</option>
+						<option>Low</option>
+					</select>
+
+					<label>Priority</label>
+					<select>
+						<option>High</option>
+						<option>Low</option>
+					</select>
+				</div>
+				<div class="ticets_dt_button py-3 px-4">
+					<button class="btn btn-success" style="background-color: #02b875;">Update</button>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p class="mb-0">&copy; 2020 Digisuite Solutions LLP. All Right Copyright Reserved.</p>
+		</footer>
+	</section>
+	<script src="js/jquery3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>  
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#search_input').keyup(function(){
+				var val = $(this).val();
+				if(val !== ''){
+					$('.input_wrapper>i').hide();
+				}else{
+					$('.input_wrapper>i').show();
+				}
+			});
+
+			$('.filter_button').click(function(){
+				$('.filters_dt').css("right", "0");
+			});
+
+			$('.close_filter').click(function(){
+				$('.filters_dt').css("right", "-300px");
+			});
+
+			$('.haschilds').click(function(e){
+				e.preventDefault()
+				$(this).next().toggleClass('haschilds_height');
+				$(this).toggleClass('rotate_icon');
+			});
+
+			$('.new_ticket_btn').click(function(){
+				window.location.href = "new_tickets.html";
+			});
+
+			$('.open_ul').click(function(){
+				$('header>ul').slideToggle('medium', function() {
+				    if ($(this).is(':visible'))
+        			$(this).css('display','flex');
+				});
+			});
+
+			$('.toggle_aside').click(function(){
+				$('aside').css('width', '220px');
+				$('.backdrop').css('display', 'unset');
+				$('.close_aside').addClass('close_aside_position');
+			});
+
+			$('.close_aside').click(function(){
+				$(this).removeClass('close_aside_position');
+				$('aside').css('width', '0px');
+				$('.backdrop').css('display', 'none');
+			});
+		});
+	</script>
+</body>
+</html>

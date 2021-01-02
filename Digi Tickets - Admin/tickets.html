@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>TICKETS - DIGI TICKETS</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">	 
+	</head>
+
+<body>
+	<section class="relative page_wrapper">
+		<aside class="fixed">
+			<div>
+				<div class="mt-2 mb-4 text-center">
+					<a href="index.html">
+						<img src="img/logo.png" width="150px;">
+					</a>
+				</div>
+				<nav>
+					<ul class="list-unstyled px-3">
+						<li class="row digi_nav_item">
+							<a href="index.html">
+								<img src="img/dashboard.png" class="isnot_active">
+								<img src="img/dashboard_active.png" class="is_active">
+								<span>Dashboard</span>
+							</a>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="" class="haschilds">
+								<img src="img/tickets.png" class="isnot_active">
+								<img src="img/tickets_active.png" class="is_active">
+								<span>Tickets</span>
+							</a>
+							<ul class="list-unstyled child_nav pl-4">
+								<li>
+									<a href="all_tickets.html">
+										<span class="marker_circle"></span>
+										All Tickets
+									</a>
+								</li>
+								<li>
+									<a href="new_tickets.html">
+										<span class="marker_circle"></span>
+										Create Ticket
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="" class="haschilds">
+								<img src="img/masters.png" class="isnot_active">
+								<img src="img/masters_active.png" class="is_active">
+								<span>Masters</span>
+							</a>
+							<ul class="list-unstyled child_nav pl-4">
+								<li>
+									<a href="department_master.html">
+										<span class="marker_circle"></span>
+										Department Master
+									</a>
+								</li>
+								<li>
+									<a href="project_master.html">
+										<span class="marker_circle"></span>
+										Project Master
+									</a>
+								</li>
+								<li>
+									<a href="module_master.html">
+										<span class="marker_circle"></span>
+										Module Master
+									</a>
+								</li>
+								<li>
+									<a href="agent_master.html">
+										<span class="marker_circle"></span>
+										Agent Master
+									</a>
+								</li>
+								<li>
+									<a href="user_master_invoice.html">
+										<span class="marker_circle"></span>
+										Users Master
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="analytics_report.html">
+								<img src="img/analytics.png" class="isnot_active">
+								<img src="img/analytics_active.png" class="is_active">
+								<span class="text-nowrap">Analytics & reports</span>
+							</a>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="#">
+								<img src="img/setting.png" class="isnot_active">
+								<img src="img/setting_active.png" class="is_active">
+								<span>Settings</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<div class="backdrop"></div>
+		<span class="close_aside">
+			<i class="fas fa-angle-left"></i>
+		</span>
+		<header class="fixed d-flex align-items-center">
+			<span class="toggle_aside">
+				<i class="fas fa-bars"></i>
+			</span>
+			<div class="input_wrapper ml-4">
+				<input type="search" name="search" id="search_input" placeholder="Search..." class="py-3" autocomplete="off">
+				<i class="fas fa-search"></i>
+			</div>
+			<ul class="mb-0 list-unstyled ml-auto box-shadow_sm">
+				<li class="px-3 new_ticket_hide">
+					<button class="btn new_ticket_btn">
+						<span>New Ticket</span>
+						<i class="fas fa-plus ml-2"></i>
+					</button>
+				</li>
+				<li class="px-4">
+					<img src="img/notification.png" width="21px;">
+				</li>
+				<li class="px-3">
+					<div>
+						<img src="img/us_flag.jpg" width="25px;">
+						<span class="ml-1 d-none-sm">EN</span>
+					</div>
+				</li>
+				<li class="log_out px-3 relative">
+					<div class="">
+						<img src="img/profile_user.jpg">
+						<span>John Doe</span>
+						<i class="fas fa-angle-down d-none-sm"></i>
+						<ul class="logout_list list-unstyled absolute">
+							<li>
+								<a href="login.html">
+									<span>Log Out</span>
+									<i class="fas fa-sign-out-alt ml-auto"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<button class="btn new_ticket_btn new_ticket_show">
+				<span>New Ticket</span>
+				<i class="fas fa-plus ml-2"></i>
+			</button>
+			<span class="open_ul">
+				<i class="fas fa-ellipsis-v"></i>
+			</span>
+		</header>
+		<section class="main_view">
+			<div class="all_tickets main_view_top pt-3 px-3">
+				<h5>Tickets</h5>
+			</div>
+			<div class="row ticket_details" style="margin: 0;">
+				<div class="col-md-9 bg-white py-4">
+					<div class="span_float_unset_md">
+						<span class="font-weight-bold">Change Frontend Design</span>
+						<span class="float-right">18 AUG 2020</span>
+					</div>
+					<div class="d-flex pt-4">
+						<div class="avatar">E</div>
+						<div class="deets_inner">
+							<p class="mb-0">Elice Vay</p>
+							<i>8 days ago</i>
+
+							<div class="desc">
+									Hi, <br> <br>
+
+									I want to change frontend design of website and color also, my order No. is (#121212) <br>
+									I will provide you sample color of reference. <br><br>
+
+									Please do needful asap. <br> <br>
+
+
+									Thanks, <br>
+									Elice Vay
+							</div>
+						</div>
+					</div>
+					<div class="d-flex align-items-center">
+						<div class="avatar">A</div>
+						<button class="theme_grey_btn" id="openComment_area">
+							<i class="fas fa-reply mr-2"></i>
+							<span>Reply</span>
+						</button>
+					</div>
+					<div class="relative textarea_wrapper comment_area" style="display: none;">
+						<textarea placeholder="Add a comment..." id="ticket_comment"></textarea>
+						<div class="textarea_bottom absolute">
+							<p class="mb-0 mt-2"><label class="show_length">0</label>/800 characters</p>
+							<button class="btn btn-success float-right mt-2">Send</button>
+						</div>
+					</div>
+
+					<div class="d-flex old_comments mt-2">
+						<div class="avatar">C</div>
+						<div>
+							<p class="mb-0">
+								<span class="name">Customer Service</span>
+								<span>replied</span>
+							</p>
+							<i>8 days ago</i>
+
+							<p class="mt-3 mb-0">
+								<span>To:</span>
+								<span>Elice Vay</span>
+							</p>
+
+							<p class="mb-0 mt-3">Hi, <span>Elice</span></p>
+							<p>I hope this was helpful. If you hace any further doubts, feel free to reace out to me.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 tickets_dt px-0">
+					<div class="heading py-3 px-4">
+						<h5>Ticket Details</h5>
+					</div>
+					<div class="px-4">
+						<label class="mt-4">Assign to</label>
+						<select>
+							<option>Support</option>
+							<option>Bugs</option>
+						</select>
+
+						<label>Agent</label>
+						<select>
+							<option>John Doe</option>
+							<option>Joe Biden</option>
+						</select>
+
+						<label>Status</label>
+						<select>
+							<option>Open</option>
+							<option>Pending</option>
+						</select>
+
+						<label>Priority</label>
+						<select>
+							<option>High</option>
+							<option>Low</option>
+						</select>
+					</div>
+					<div class="ticets_dt_button py-3 px-4">
+						<button class="btn btn-success">Update</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p class="mb-0">&copy; 2020 Digisuite Solutions LLP. All Right Copyright Reserved.</p>
+		</footer>
+	</section>
+	<script src="js/jquery3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>  
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#search_input').keyup(function(){
+				var val = $(this).val();
+				if(val !== ''){
+					$('.input_wrapper>i').hide();
+				}else{
+					$('.input_wrapper>i').show();
+				}
+			});
+			
+			$('#ticket_comment').keyup(function(){
+				var length = $(this).val().length;
+				if(length <= 800){
+					$('.show_length').html(length).css("color", "grey");
+				} else{
+					$('.show_length').html(length).css("color", "red");
+				}
+			});
+
+			$('#openComment_area').click(function(){
+				$(".comment_area").slideDown();
+			});
+
+			$('.haschilds').click(function(e){
+				e.preventDefault()
+				$(this).next().toggleClass('haschilds_height');
+				$(this).toggleClass('rotate_icon');
+			});
+
+			$('.new_ticket_btn').click(function(){
+				window.location.href = "new_tickets.html";
+			});
+
+			$('.open_ul').click(function(){
+				$('header>ul').slideToggle('medium', function() {
+				    if ($(this).is(':visible'))
+        			$(this).css('display','flex');
+				});
+			});
+
+			$('.toggle_aside').click(function(){
+				$('aside').css('width', '220px');
+				$('.backdrop').css('display', 'unset');
+				$('.close_aside').addClass('close_aside_position');
+			});
+
+			$('.close_aside').click(function(){
+				$(this).removeClass('close_aside_position');
+				$('aside').css('width', '0px');
+				$('.backdrop').css('display', 'none');
+			});
+		});
+	</script>
+</body>
+</html>

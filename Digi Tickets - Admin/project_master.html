@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>PROJECT MASTER - DIGI TICKETS</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">	 
+	</head>
+
+<body>
+	<section class="relative page_wrapper">
+		<aside class="fixed">
+			<div>
+				<div class="mt-2 mb-4 text-center">
+					<a href="index.html">
+						<img src="img/logo.png" width="150px;">
+					</a>
+				</div>
+				<nav>
+					<ul class="list-unstyled px-3">
+						<li class="row digi_nav_item">
+							<a href="index.html">
+								<img src="img/dashboard.png" class="isnot_active">
+								<img src="img/dashboard_active.png" class="is_active">
+								<span>Dashboard</span>
+							</a>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="" class="haschilds">
+								<img src="img/tickets.png" class="isnot_active">
+								<img src="img/tickets_active.png" class="is_active">
+								<span>Tickets</span>
+							</a>
+							<ul class="list-unstyled child_nav pl-4">
+								<li>
+									<a href="all_tickets.html">
+										<span class="marker_circle"></span>
+										All Tickets
+									</a>
+								</li>
+								<li>
+									<a href="new_tickets.html">
+										<span class="marker_circle"></span>
+										Create Ticket
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="" class="haschilds">
+								<img src="img/masters.png" class="isnot_active">
+								<img src="img/masters_active.png" class="is_active">
+								<span>Masters</span>
+							</a>
+							<ul class="list-unstyled child_nav pl-4">
+								<li>
+									<a href="department_master.html">
+										<span class="marker_circle"></span>
+										Department Master
+									</a>
+								</li>
+								<li>
+									<a href="project_master.html">
+										<span class="marker_circle"></span>
+										Project Master
+									</a>
+								</li>
+								<li>
+									<a href="module_master.html">
+										<span class="marker_circle"></span>
+										Module Master
+									</a>
+								</li>
+								<li>
+									<a href="agent_master.html">
+										<span class="marker_circle"></span>
+										Agent Master
+									</a>
+								</li>
+								<li>
+									<a href="user_master_invoice.html">
+										<span class="marker_circle"></span>
+										Users Master
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="analytics_report.html">
+								<img src="img/analytics.png" class="isnot_active">
+								<img src="img/analytics_active.png" class="is_active">
+								<span class="text-nowrap">Analytics & reports</span>
+							</a>
+						</li>
+						<li class="row digi_nav_item">
+							<a href="#">
+								<img src="img/setting.png" class="isnot_active">
+								<img src="img/setting_active.png" class="is_active">
+								<span>Settings</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<div class="backdrop"></div>
+		<span class="close_aside">
+			<i class="fas fa-angle-left"></i>
+		</span>
+		<header class="fixed d-flex align-items-center">
+			<span class="toggle_aside">
+				<i class="fas fa-bars"></i>
+			</span>
+			<div class="input_wrapper ml-4">
+				<input type="search" name="search" id="search_input" placeholder="Search..." class="py-3" autocomplete="off">
+				<i class="fas fa-search"></i>
+			</div>
+			<ul class="mb-0 list-unstyled ml-auto box-shadow_sm">
+				<li class="px-3 new_ticket_hide">
+					<button class="btn new_ticket_btn">
+						<span>New Ticket</span>
+						<i class="fas fa-plus ml-2"></i>
+					</button>
+				</li>
+				<li class="px-4">
+					<img src="img/notification.png" width="21px;">
+				</li>
+				<li class="px-3">
+					<div>
+						<img src="img/us_flag.jpg" width="25px;">
+						<span class="ml-1 d-none-sm">EN</span>
+					</div>
+				</li>
+				<li class="log_out px-3 relative">
+					<div class="">
+						<img src="img/profile_user.jpg">
+						<span>John Doe</span>
+						<i class="fas fa-angle-down d-none-sm"></i>
+						<ul class="logout_list list-unstyled absolute">
+							<li>
+								<a href="login.html">
+									<span>Log Out</span>
+									<i class="fas fa-sign-out-alt ml-auto"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<button class="btn new_ticket_btn new_ticket_show">
+				<span>New Ticket</span>
+				<i class="fas fa-plus ml-2"></i>
+			</button>
+			<span class="open_ul">
+				<i class="fas fa-ellipsis-v"></i>
+			</span>
+		</header>
+		<section class="main_view">
+			<div class="all_tickets main_view_top pt-3 px-3">
+				<h5>Project Master</h5>
+			</div>
+			<div class="px-3">
+				<div class="bg-white px-sm-3 py-4 mt-4 form_card border-radius-5px">
+					<form class="px-4 py-4" id="newticket_form">
+						<div>
+							<label>Project ID</label>
+							<input type="text" name="tickettitle" id="tickettitle" placeholder="Enter Title">
+						</div>
+						<div>
+							<label>Project Name</label>
+							<input type="text" name="tickettitle" id="tickettitle" placeholder="Enter Title">
+						</div>
+						<div>
+							<label>Status</label>
+							<select>
+								<option selected disabled></option>
+								<option>Active</option>
+								<option>Pending</option>
+								<option>In Progress</option>
+							</select>
+						</div>
+						<div class="text-center mt-3">
+							<button type="button" class="theme_btn mr-3" id="reset_ticketform">SAVE</button>
+							<button type="button" class="theme_btn theme_btn2">OPEN</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p class="mb-0">&copy; 2020 Digisuite Solutions LLP. All Right Copyright Reserved.</p>
+		</footer>
+	</section>
+	<script src="js/jquery3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>  
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#search_input').keyup(function(){
+				var val = $(this).val();
+				if(val !== ''){
+					$('.input_wrapper>i').hide();
+				}else{
+					$('.input_wrapper>i').show();
+				}
+			});
+
+			$('.haschilds').click(function(e){
+				e.preventDefault()
+				$(this).next().toggleClass('haschilds_height');
+				$(this).toggleClass('rotate_icon');
+			});
+
+			$('.new_ticket_btn').click(function(){
+				window.location.href = "new_tickets.html";
+			});
+
+			$('.open_ul').click(function(){
+				$('header>ul').slideToggle('medium', function() {
+				    if ($(this).is(':visible'))
+        			$(this).css('display','flex');
+				});
+			});
+
+			$('.toggle_aside').click(function(){
+				$('aside').css('width', '220px');
+				$('.backdrop').css('display', 'unset');
+				$('.close_aside').addClass('close_aside_position');
+			});
+
+			$('.close_aside').click(function(){
+				$(this).removeClass('close_aside_position');
+				$('aside').css('width', '0px');
+				$('.backdrop').css('display', 'none');
+			});
+		});
+	</script>
+</body>
+</html>
